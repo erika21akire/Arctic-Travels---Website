@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arctic Travels</title>
+    <link rel="stylesheet" href="lodging.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Lodging Options</h1>
+            <p>From luxurious chalets to affordable hostels, the right lodging can make your ski vacation both enjoyable and convenient. Whether you prioritize ski-in/ski-out access, cozy mountain vibes, or budget-conscious options, there’s something for every traveler.</p>
+        </div>
+    </header>
+
+    <main>
+    <div class="container">
+            <!-- Ski-in/Ski-out Resorts -->
+        <section class="lodging">
+            <h2>Ski-in/Ski-out Resorts</h2>
+            <p>Ski-in/ski-out resorts allow you to step right out of your door and onto the slopes. These accommodations are perfect for avid skiers who want to maximize their time on the mountain without worrying about transportation. Resorts like The Little Nell in Aspen or Fairmont Chateau Whistler in Canada provide luxury ski-in/ski-out access combined with five-star amenities, including fine dining, spas, and personalized services.</p>
+
+            <!-- Image Carousel -->
+            <div class="carousel">
+                <img src="ski_in_out1.jpg" class="carousel-img" alt="Ski-in/Ski-out Resort 1">
+                <img src="ski_in_out2.jpg" class="carousel-img" alt="Ski-in/Ski-out Resort 2">
+                <img src="ski_in_out3.jpg" class="carousel-img" alt="Ski-in/Ski-out Resort 3">
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Luxury Chalets -->
+        <section class="lodging">
+            <h2>Luxury Chalets</h2>
+            <p>If you prefer a more private and opulent stay, luxury chalets are an excellent choice. These mountain lodges offer exclusive services such as private chefs, hot tubs, and concierge staff, making them ideal for group trips or family vacations. Chalet Zermatt Peak in Switzerland or Chalet Edelweiss in Courchevel offer elegant interiors, breathtaking views, and high-end comforts tailored to your needs.</p>
+
+            <!-- Image Carousel -->
+            <div class="carousel">
+                <img src="chalet1.jpg" class="carousel-img" alt="Luxury Chalet 1">
+                <img src="chalet2.jpg" class="carousel-img" alt="Luxury Chalet 2">
+                <img src="chalet3.jpg" class="carousel-img" alt="Luxury Chalet 3">
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Luxury Chalets -->
+        <section class="lodging">
+            <h2>Mountain Lodges</h2>
+            <p>Mountain lodges offer a more rustic, cozy experience without sacrificing comfort. Many of these lodges focus on warmth and atmosphere, featuring wood-burning fireplaces, snug common areas, and hearty meals. Resorts like Jackson Lake Lodge in Wyoming or Alpina Gstaad in Switzerland provide the perfect blend of authenticity and comfort, ideal for those looking to unwind after a long day on the slopes.</p>
+
+            <!-- Image Carousel -->
+            <div class="carousel">
+                <img src="chalet1.jpg" class="carousel-img" alt="Luxury Chalet 1">
+                <img src="chalet2.jpg" class="carousel-img" alt="Luxury Chalet 2">
+                <img src="chalet3.jpg" class="carousel-img" alt="Luxury Chalet 3">
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Luxury Chalets -->
+        <section class="lodging">
+            <h2>Boutique Hotels</h2>
+            <p>Boutique hotels offer a charming and personalized experience for skiers who prefer unique design and intimate service. These smaller hotels often feature curated interiors, local touches, and excellent customer service. Stay at Le Fitz Roy in Val Thorens, France, or The Firefly in Zermatt, Switzerland, for a stylish yet intimate ski vacation experience.</p>
+
+            <!-- Image Carousel -->
+            <div class="carousel">
+                <img src="chalet1.jpg" class="carousel-img" alt="Luxury Chalet 1">
+                <img src="chalet2.jpg" class="carousel-img" alt="Luxury Chalet 2">
+                <img src="chalet3.jpg" class="carousel-img" alt="Luxury Chalet 3">
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </section>
+
+        <!-- Luxury Chalets -->
+        <section class="lodging">
+            <h2> Budget-Friendly Hostels</h2>
+            <p>For travelers on a budget or solo adventurers, hostels can provide affordable accommodations with a communal atmosphere. Many ski resorts have hostels or budget hotels that still offer great access to the slopes. The St. Anton Youth Hostel in Austria or Mountain Hostel in Gimmelwald, Switzerland, are examples of affordable yet comfortable lodging for those looking to save money without sacrificing location.</p>
+
+            <!-- Image Carousel -->
+            <div class="carousel">
+                <img src="chalet1.jpg" class="carousel-img" alt="Luxury Chalet 1">
+                <img src="chalet2.jpg" class="carousel-img" alt="Luxury Chalet 2">
+                <img src="chalet3.jpg" class="carousel-img" alt="Luxury Chalet 3">
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+        </section>
+    </div>
+    </main>
+
+    <script>
+        let currentSlide = 0;
+
+// Get all the image carousels
+const carousels = document.querySelectorAll('.carousel');
+
+// Function to show the current slide
+function showSlide(index, carousel) {
+    const slides = carousel.querySelectorAll('.carousel-img');
+    slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === index) {
+            slide.classList.add('active');
+        }
+    });
+}
+
+// Function to go to the next slide
+function nextSlide() {
+    carousels.forEach(carousel => {
+        const slides = carousel.querySelectorAll('.carousel-img');
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide, carousel);
+    });
+}
+
+// Function to go to the previous slide
+function prevSlide() {
+    carousels.forEach(carousel => {
+        const slides = carousel.querySelectorAll('.carousel-img');
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide, carousel);
+    });
+}
+
+// Show the first slide by default for all carousels
+carousels.forEach(carousel => {
+    showSlide(0, carousel);
+});
+    </script>
+
+    <footer>
+        <p>&copy; 2024 Arctic Travels. All rights reserved.</p>
+    </footer>
+</body>
+</html>

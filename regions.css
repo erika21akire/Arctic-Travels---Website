@@ -1,0 +1,112 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #98e5ef;
+    color: #333;
+  }
+
+  header.hero {
+    background-image: url('images/ski-mountains.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    background-color: white;
+    background: rgba(255, 255, 255, 0.263); /* Semi-transparent black */
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    
+  }
+  
+  .hero p {
+    font-size: 1.7rem;
+    margin-bottom: 40px;
+    color: #666;
+  }
+  
+  
+  main {
+    padding: 40px 20px;
+    align-items: center;
+  }
+
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #0277bd;
+}
+
+.region {
+    margin-bottom: 40px;
+    padding: 40px;
+    color: white;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    position: relative;
+    background-blend-mode: overlay;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay effect for better text visibility */
+    border-left: 4px solid #0288d1;
+}
+
+.region h2 {
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.region p {
+    color: #f1f1f1;
+    line-height: 1.6;
+}
+
+/* Background Images for Each Section */
+.region.alps {
+    background-image: url('https://images.pexels.com/photos/753772/pexels-photo-753772.jpeg?cs=srgb&dl=pexels-denis-linine-214373-753772.jpg&fm=jpg'); /* Replace with actual image path */
+}
+
+.region.rockies {
+    background-image: url('https://www.worldatlas.com/r/w768/upload/8e/3e/16/shutterstock-2083093512.jpg'); /* Replace with actual image path */
+}
+
+.region.hokkaido {
+    background-image: url('https://www.agoda.com/wp-content/uploads/2019/12/Grand-Hirafu-Niseko-Village-ski-resort-things-to-do-in-Niseko-Japan.jpg'); /* Replace with actual image path */
+}
+
+.region.andes {
+    background-image: url('https://peakvisor.com/photo/Andes-Mountains-Argentina-Cerro-Aconcagua.jpg'); /* Replace with actual image path */
+}
+
+.region.scandinavia {
+    background-image: url('https://www.traveloffpath.com/wp-content/uploads/2024/07/Picturesque-View-Of-A-Scenic-Village-In-Lofoten-Norway-Scandinavia-Northern-Europe.jpg'); /* Replace with actual image path */
+}
+
+/* Additional Styles */
+.region:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
