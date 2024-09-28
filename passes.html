@@ -7,6 +7,27 @@
         <link rel="stylesheet" href="passes.css">
     </head>
     <body>
+
+        <nav>
+            <ul class="sidebar">
+                <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+                <li><a href="planning.html">Trip Planning</a></li>
+                <li><a href="tracking.html">Tracking</a></li>
+                <li><a href="agent.html">Agent Support</a></li>
+                <li><a href="#">Luxury Pricing</a></li>
+                <li><a href="contact.html">Contact</a></li>
+               </ul>
+           <ul>
+            <li><a href="index.html">Home</a></li>
+            <li class="hideOnMobile"><a href="planning.html">Trip Planning</a></li>
+            <li class="hideOnMobile"><a href="tracking.html">Tracking</a></li>
+            <li class="hideOnMobile"><a href="agent.html">Agent Support</a></li>
+            <li class="hideOnMobile"><a href="#">Luxury Pricing</a></li>
+            <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+            <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+           </ul>
+        </nav>
+
             <header class="hero">
                 <div class="hero-content">
                     <h1>To make the most of your ski vacation, finding the best deals on lift passes and ski packages is key.</h1>
@@ -81,4 +102,197 @@
         <footer>
             <p>&copy; 2021, All rights reserved.</p>
         </footer>
+
+        <script>
+            function showSidebar() {
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'flex';
+            }
+        
+            function hideSidebar() {
+                const sidebar = document.querySelector('.sidebar')
+                sidebar.style.display = 'none';
+            }
+        </script>
+
+    </body>
 </html>
+
+<style>
+    body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /*background-color: #f0f8ff;*/
+    background-image: url('https://images.pexels.com/photos/209955/pexels-photo-209955.jpeg?cs=srgb&dl=pexels-pixabay-209955.jpg&fm=jpg');
+    background-size: cover;
+    background-position: center;
+    color: #333;
+  }
+
+  nav {
+    background-color: #333;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: black;
+  }
+  
+  nav li {
+    height: 50px;
+  }
+  
+  nav a {
+    height: 100%;
+    padding: 0 40px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+    padding-left: 35px;
+  }
+  
+  nav a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  nav li:first-child {
+    margin-right: auto;
+  }
+  
+  .sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: rgba(3, 3, 3, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .sidebar li {
+    width: 100%;
+  }
+  
+  .sidebar a {
+    width: 100%;
+  }
+  
+  .menu-button {
+    display: none;
+  }
+  
+  @media(max-width: 800px) {
+    .hideOnMobile {
+      display: none;
+    }
+    .menu-button{
+      display: block;
+    }
+  }
+  
+  @media(max-width: 400px){
+    .sidebar{
+      width: 100%;
+    }
+  }
+  
+    header.hero {
+    background-image: url('images/ski-mountains.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align-last: center;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #666;
+  }
+  
+  
+  main {
+    padding: 40px 20px;
+    align-items: center;
+  }
+
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: white;
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Adjust blur level */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    width: calc(30% - 20px); /* Adjust width for three cards in a row */
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+h3 {
+    margin-top: 0;
+    color: #4a4a4a;
+}
+
+p {
+    color: #666;
+}
+
+/* Media query for smaller screens (1-column layout) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .column {
+        flex: 100%;
+        margin: 10px 0;
+    }
+}
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+</style>

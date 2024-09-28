@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arctic Travels</title>
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="planning.html">Trip Planning</a></li>
+            <li><a href="tracking.html">Tracking</a></li>
+            <li><a href="agent.html">Agent Support</a></li>
+            <li><a href="#">Luxury Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+           </ul>
+       <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="hideOnMobile"><a href="plannning">Trip Planning</a></li>
+        <li class="hideOnMobile"><a href="tracking.html">Tracking</a></li>
+        <li class="hideOnMobile"><a href="agent.html">Agent Support</a></li>
+        <li class="hideOnMobile"><a href="#">Luxury Pricing</a></li>
+        <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+       </ul>
+    </nav>
+
+
+    <main>
+        <div class="tracking-container">
+            <h1>Track Your Trip</h1>
+            <div class="trip-details">
+                <div class="detail">
+                    <h3>Trip Name:</h3>
+                    <p id="trip-name">European Adventure</p>
+                </div>
+                <div class="detail">
+                    <h3>Destination:</h3>
+                    <p id="destination">Paris, France</p>
+                </div>
+                <div class="detail">
+                    <h3>Current Location:</h3>
+                    <p id="current-location">London, UK</p>
+                </div>
+                <div class="detail">
+                    <h3>Status:</h3>
+                    <p id="status">In Progress</p>
+                </div>
+                <div class="detail">
+                    <h3>Estimated Time of Arrival (ETA):</h3>
+                    <p id="eta">2024-10-02 15:00</p>
+                </div>
+                <div class="detail">
+                    <h3>Transportation Mode:</h3>
+                    <p id="transportation-mode">Train</p>
+                </div>
+                <div class="detail">
+                    <h3>Distance to Destination:</h3>
+                    <p id="distance">342 km</p>
+                </div>
+            </div>
+    
+            <div class="map-container">
+                <h3>Live Map</h3>
+                <!-- Placeholder for a map -->
+                <div id="map-placeholder">
+                    <p>Map will be displayed here (Google Maps, OpenStreetMap, etc.)</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2024 Arctic Travels. All rights reserved.</p>
+    </footer>
+
+<script>
+    function showSidebar() {
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex';
+    }
+
+    function hideSidebar() {
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none';
+    }
+</script>
+<script>
+    // Here you can dynamically update the trip details with JavaScript
+    // Example of how you can track live data with APIs or real-time updates
+    document.getElementById('current-location').innerText = 'Updating...'; // Placeholder for dynamic location
+</script>
+
+</body>
+</html>
+
+<style>
+    body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f8ff;
+  color: #333;
+  
+}
+
+nav {
+  background-color: #333;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+nav ul {
+  width: 100%;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: black;
+}
+
+nav li {
+  height: 50px;
+}
+
+nav a {
+  height: 100%;
+  padding: 0 40px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding-left: 35px;
+}
+
+nav a:hover {
+  background-color: #f0f0f0;
+}
+
+nav li:first-child {
+  margin-right: auto;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(3, 3, 3, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar li {
+  width: 100%;
+}
+
+.sidebar a {
+  width: 100%;
+}
+
+.menu-button {
+  display: none;
+}
+
+@media(max-width: 800px) {
+  .hideOnMobile {
+    display: none;
+  }
+  .menu-button{
+    display: block;
+  }
+}
+
+@media(max-width: 400px){
+  .sidebar{
+    width: 100%;
+  }
+}
+
+
+main {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.tracking-container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    text-align: center;
+}
+
+.tracking-container h1 {
+    margin-bottom: 20px;
+    color: #34495e;
+}
+
+.trip-details {
+    margin-bottom: 20px;
+}
+
+.detail {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.detail h3 {
+    color: #2c3e50;
+    font-size: 16px;
+}
+
+.detail p {
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.map-container {
+    margin-top: 20px;
+}
+
+#map-placeholder {
+    width: 100%;
+    height: 200px;
+    background-color: #dfe6e9;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2d3436;
+}
+
+#map-placeholder p {
+    font-size: 14px;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+</style>

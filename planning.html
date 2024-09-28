@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arctic Travels</title>
+    <link rel="stylesheet" href="planning.css">
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="planning.html">Trip Planning</a></li>
+            <li><a href="tracking.html">Tracking</a></li>
+            <li><a href="agent.html">Agent Support</a></li>
+            <li><a href="#">Luxury Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+           </ul>
+       <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="hideOnMobile"><a href="planning.html">Trip Planning</a></li>
+        <li class="hideOnMobile"><a href="tracking.html">Tracking</a></li>
+        <li class="hideOnMobile"><a href="agent.html">Agent Support</a></li>
+        <li class="hideOnMobile"><a href="#">Luxury Pricing</a></li>
+        <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+       </ul>
+    </nav>
+
+    <main>    
+        <div class="planning-container">
+            <h1>Plan Your Trip</h1>
+            <form action="/submit-plan" method="POST" class="planning-form">
+                <div class="form-group">
+                    <label for="trip-name">Trip Name:</label>
+                    <input type="text" id="trip-name" name="trip-name" placeholder="Enter your trip name" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="destination">Destination:</label>
+                    <input type="text" id="destination" name="destination" placeholder="Where are you going?" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="start-date">Start Date:</label>
+                    <input type="date" id="start-date" name="start-date" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="end-date">End Date:</label>
+                    <input type="date" id="end-date" name="end-date" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="activities">Activities Planned:</label>
+                    <textarea id="activities" name="activities" rows="4" placeholder="Enter activities you want to do (e.g., hiking, sightseeing)" required></textarea>
+                </div>
+    
+                <div class="form-group">
+                    <label for="budget">Budget Estimate:</label>
+                    <input type="number" id="budget" name="budget" placeholder="Estimated budget ($)" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="accommodation">Accommodation:</label>
+                    <input type="text" id="accommodation" name="accommodation" placeholder="Where will you stay? (e.g., hotel, hostel)" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="transport">Transportation:</label>
+                    <input type="text" id="transport" name="transport" placeholder="Transportation options (e.g., flights, car rental)" required>
+                </div>
+    
+                <button type="submit" class="submit-btn">Save Trip Plan</button>
+            </form>
+        </div>
+             
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Arctic Travels. All rights reserved.</p>
+    </footer>
+
+<script>
+    function showSidebar() {
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex';
+    }
+    function hideSidebar() {
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
