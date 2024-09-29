@@ -4,6 +4,9 @@ body, html {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
     color: #333;
+    background-image: url('https://assets.vogue.com/photos/63b883bdf8989f4ae6ba680e/master/w_2560%2Cc_limit/GettyImages-502757710.jpg');
+    background-size: cover;
+    background-position: center;
   }
   
   nav {
@@ -86,31 +89,6 @@ body, html {
     .sidebar{
       width: 100%;
     }
-  }  
-
-  header.hero {
-    background-image: url('images/ski-mountains.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 100px 20px;
-  }
-  
-  .hero-content {
-    max-width: 600px;
-    margin: auto;
-  }
-  
-  .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 40px;
-    color: #666;
   }
   
   
@@ -119,69 +97,46 @@ body, html {
     text-align: center;
   }
   
-  .categories {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 40px;
-    text-align: center;
-  }
- 
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    max-width: 1000px;
-    margin: 0 auto;
-  }
-  
-  .image-container {
+  .faq-section {
     width: 80%;
-    height: 300px; /* Set a fixed height for the image container */
-    overflow: hidden; /* Ensure overflow is hidden */
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
   }
   
-  .image-container img {
-    width: 100%;
-    height: 100%; /* Ensure the image fills the container */
-    object-fit: cover; /* Maintain aspect ratio while covering the container */
-  }
-  
-  .text-content {
-    width: 45%; /* Same as image container for balance */
-    margin-top: 10px;
-    padding-left: 30px; /* Reduce padding to ensure the text doesn't hit the edge */
-    text-align: left; /* Optional: align the text content to the left */
-  }
-  
-  .text-content h2 {
-    font-size: 1.5rem;
-    color: #666;
-  }
-  
-  .text-content h1 {
-    font-size: 2.5rem;
-    margin: 10px 0;
-  }
-  
-  .text-content p {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin: 10px 0 20px 0;
-  }
-  
-  
-  .cta-link {
+  .faq-header {
+    padding: 15px;
     background-color: #007bff;
     color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .faq-header:hover {
+    background-color: #0056b3;
+  }
+
+  .faq-content {
+    padding: 15px;
+    background-color: #f9f9f9;
+    background: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+    backdrop-filter: blur(10px); /* Adjust blur level */
+    display: none;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .faq-header::after {
+    content: '+';
+    font-size: 20px;
   }
   
-  .cta-link:hover {
-    background-color: #0056b3;
+  .faq-header.active::after {
+    content: '-';
   }
   
   footer {

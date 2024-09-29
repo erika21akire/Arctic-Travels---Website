@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arctic Travels</title>
+    <link rel="stylesheet" href="FAQs.css">
+</head>
+<body>
+    <nav>
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#5f6368"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
+            <li><a href="planning.html">Trip Planning</a></li>
+            <li><a href="tracking.html">Tracking</a></li>
+            <li><a href="agent.html">Agent Support</a></li>
+            <li><a href="#">Luxury Pricing</a></li>
+            <li><a href="contact.html">Contact</a></li>
+           </ul>
+       <ul>
+        <li><a href="index.html">Home</a></li>
+        <li class="hideOnMobile"><a href="plannning">Trip Planning</a></li>
+        <li class="hideOnMobile"><a href="tracking.html">Tracking</a></li>
+        <li class="hideOnMobile"><a href="agent.html">Agent Support</a></li>
+        <li class="hideOnMobile"><a href="#">Luxury Pricing</a></li>
+        <li class="hideOnMobile"><a href="contact.html">Contact</a></li>
+        <li class="menu-button" onclick=showSidebar()><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="26" viewBox="0 -960 960 960" width="26" fill="#5f6368"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg></a></li>
+       </ul>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1></h1>
+            <p></p>
+        </div>
+    </header>
+
+    <main>
+        <div class="faq-section">
+            <div class="faq-header">What is the best time to visit the ski resorts?</div>
+            <div class="faq-content">
+              <p>The best time to visit is typically between December and March when the snow is fresh and the slopes are open.</p>
+            </div>
+          </div>
+        
+          <div class="faq-section">
+            <div class="faq-header">Do I need to book in advance?</div>
+            <div class="faq-content">
+              <p>Yes, we recommend booking in advance, especially during peak season, to ensure availability of accommodation and ski passes.</p>
+            </div>
+          </div>
+        
+          <div class="faq-section">
+            <div class="faq-header">Are ski lessons available for beginners?</div>
+            <div class="faq-content">
+              <p>Yes, we offer ski lessons for all skill levels, including beginners. You can book lessons along with your accommodation or separately.</p>
+            </div>
+          </div>
+        
+          <div class="faq-section">
+            <div class="faq-header">What kind of accommodation do you offer?</div>
+            <div class="faq-content">
+              <p>We offer a wide range of accommodation from luxury ski lodges to cozy cabins, all located close to the ski slopes.</p>
+            </div>
+          </div>
+        
+          <div class="faq-section">
+            <div class="faq-header">Do you provide ski equipment rentals?</div>
+            <div class="faq-content">
+              <p>Yes, we provide rental services for ski equipment including skis, snowboards, boots, and helmets.</p>
+            </div>
+          </div>
+        
+          <div class="faq-section">
+            <div class="faq-header">What safety measures are in place at the resorts?</div>
+            <div class="faq-content">
+              <p>Our resorts follow strict safety protocols including slope patrols, marked trails, and weather monitoring to ensure a safe experience for all visitors.</p>
+            </div>
+          </div>
+    </main>
+
+    <footer>
+      <div class="footer-links">
+        <a href="FAQs.html">FAQs</a>
+        <a href="T&Cs.html">T&Cs</a>
+      </div>
+      <p>&copy; 2024 Arctic Travels. All rights reserved.</p>    
+    </footer>
+
+<script>
+    function showSidebar() {
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'flex';
+    }
+
+    function hideSidebar() {
+        const sidebar = document.querySelector('.sidebar')
+        sidebar.style.display = 'none';
+    }
+</script>
+<script>
+    document.querySelectorAll('.faq-header').forEach(item => {
+      item.addEventListener('click', () => {
+        item.classList.toggle('active');
+        let content = item.nextElementSibling;
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
