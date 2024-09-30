@@ -16,7 +16,8 @@
             <li><a href="#">Luxury Pricing</a></li>
         </ul>
        <ul>
-        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html" class="logo">
+          <img src="atlogo.png" alt="logo" height="50"></a></li>
         <li class="hideOnMobile"><a href="planning.html">Trip Planning</a></li>
         <li class="hideOnMobile"><a href="tracking.html">Tracking</a></li>
         <li class="hideOnMobile"><a href="agent.html">Agent Support</a></li>
@@ -125,6 +126,20 @@
   nav a:hover {
     background-color: #f0f0f0;
   }
+
+  nav .logo img {
+  height: 50px;
+  width: auto;
+}
+
+nav .logo:hover {
+  background-color: transparent;
+}
+
+nav a.logo img {
+  height: 150px;
+  padding-right: 70px;
+}
   
   nav li:first-child {
     margin-right: auto;
@@ -140,7 +155,7 @@
     background-color: rgba(3, 3, 3, 0.2);
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;

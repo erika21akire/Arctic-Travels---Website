@@ -42,8 +42,23 @@ nav a:hover {
   background-color: #f0f0f0;
 }
 
+nav .logo img {
+  height: 50px;
+  width: auto;
+}
+
+nav .logo:hover {
+  background-color: transparent;
+}
+
+nav a.logo img {
+  height: 150px;
+  padding-right: 70px;
+}
+
 nav li:first-child {
   margin-right: auto;
+  padding-right: 20px;
 }
 
 .sidebar {
@@ -56,7 +71,7 @@ nav li:first-child {
   background-color: rgba(3, 3, 3, 0.2);
   backdrop-filter: blur(10px);
   box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
@@ -167,6 +182,112 @@ main {
 .cta-link:hover {
   background-color: #0056b3;
 }
+
+.amenities-section {
+  padding: 50px 20px;
+  background-color: #e0f7fa;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #01579b;
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Create 3 columns */
+  gap: 30px;
+}
+
+.amenity-item {
+  background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+}
+
+.amenity-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.amenity-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #0277bd;
+}
+
+.amenity-item p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Responsive behavior for smaller screens */
+@media (max-width: 900px) {
+  .amenities-grid {
+      grid-template-columns: 1fr; /* Stack all items vertically */
+  }
+}
+
+
+.newsletter {
+  padding: 50px 10px;
+}
+
+.newsletter-section {
+  background-color: #f2f2f2; /* Light grey background */
+  padding: 40px;
+  text-align: center;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.newsletter-section h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #333; /* Darker grey for the text */
+}
+
+.newsletter-section p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.newsletter-form input[type="email"] {
+  padding: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 70%;
+  max-width: 400px;
+}
+
+.newsletter-form button {
+  padding: 15px 25px;
+  font-size: 16px;
+  background-color: #333; /* Dark grey for the button */
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.newsletter-form button:hover {
+  background-color: #555; /* Slightly lighter grey on hover */
+}
+
 
 footer {
   background-color: #333;

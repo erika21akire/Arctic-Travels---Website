@@ -4,9 +4,7 @@ body, html {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
     color: #333;
-    background-image: url('https://assets.vogue.com/photos/63b883bdf8989f4ae6ba680e/master/w_2560%2Cc_limit/GettyImages-502757710.jpg');
-    background-size: cover;
-    background-position: center;
+    
   }
   
   nav {
@@ -43,7 +41,7 @@ body, html {
   nav a:hover {
     background-color: #f0f0f0;
   }
-
+  
   nav .logo img {
     height: 50px;
     width: auto;
@@ -60,6 +58,7 @@ body, html {
   
   nav li:first-child {
     margin-right: auto;
+    padding-right: 20px;
   }
   
   .sidebar {
@@ -105,38 +104,98 @@ body, html {
     }
   }
   
-  main {
-    padding: 40px 20px;
-    text-align: center;
-  }
-
-  .container {
-    background-color: white;
-    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
-    backdrop-filter: blur(10px); /* Adjust blur level */
-  }
-  
-  h2 {
-    text-align: center;
-    margin-bottom: 30px;
+  .pricing-section {
+    padding: 60px 20px;
+    background-color: #222;
 }
 
-h3 {
-    color: #ccc;
-    margin-top: 20px;
-}
-
-p {
+.section-title {
+    font-size: 2.5rem;
+    color: #fff;
+    text-align: center;
     margin-bottom: 20px;
-    color: white;
 }
 
-hr {
-    border: 0;
-    height: 1px;
-    background: #ccc;
-    margin: 30px 0;
+.section-description {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 50px;
 }
+
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.pricing-cards .card.silver {
+    background-color: #c0c0c0; /* Silver */
+}
+
+.pricing-cards .card.gold {
+    background-color: #ffd700; /* Gold */
+}
+
+.pricing-cards .card.platinum {
+    background-color: #e5e4e2; /* Platinum */
+}
+
+.featured {
+    background-color: #4c1a7f;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.card h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.card ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #4c1a7f;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #5d1e99;
+}
+  
   
   footer {
     background-color: #333;
