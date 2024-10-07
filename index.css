@@ -184,8 +184,10 @@ main {
 }
 
 .amenities-section {
-  padding: 50px 20px;
-  background-color: #e0f7fa;
+  padding: 40px 20px;
+  background: url('https://images2.alphacoders.com/683/68370.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .container {
@@ -307,7 +309,7 @@ footer {
 
 .footer-links a {
   color: white;
-  text-decoration: none;
+  text-decoration: underline;
   margin-bottom: 10px;
 }
 
@@ -316,4 +318,5 @@ footer p {
   bottom: 10px;
   left: 20px;
   margin: 0;
+  padding-left: 550px;
 }
