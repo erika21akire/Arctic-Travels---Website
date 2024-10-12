@@ -185,9 +185,10 @@ main {
 
 .amenities-section {
   padding: 40px 20px;
-  background: url('https://images2.alphacoders.com/683/68370.jpg');
+  background-image: url('https://cdn.wallpapersafari.com/55/5/JX3RTq.jpg');
   background-size: cover;
   background-position: center;
+  
 }
 
 .container {
@@ -214,6 +215,12 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
+}
+
+.amenity-item:hover {
+  transform: translateY(-5px) scale(1.05); /* Move up and scale up on hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 .amenity-item img {
@@ -244,6 +251,7 @@ h2 {
 
 .newsletter {
   padding: 50px 10px;
+ 
 }
 
 .newsletter-section {
