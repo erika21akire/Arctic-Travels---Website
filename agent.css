@@ -5,11 +5,7 @@ body, html {
   background-color: #f0f8ff;
   color: #333;
   justify-content: center;
-  align-items: center;
-  background-image: url('https://www.powder.com/.image/t_share/MTk2MzczODE0MjI2NTI3ODkw/alta-base-2-300dpi-copy.jpg');
-  background-size: cover; /* Ensures the image covers the whole screen */
-  background-position: center; /* Centers the image */
-  background-attachment: fixed; 
+  
 }
 
 nav {
@@ -111,6 +107,11 @@ nav li:first-child {
 main {
   padding: 40px 20px;
   text-align: center;
+  align-items: center;
+  background-image: url('https://www.powder.com/.image/t_share/MTk2MzczODE0MjI2NTI3ODkw/alta-base-2-300dpi-copy.jpg');
+  background-size: cover; /* Ensures the image covers the whole screen */
+  background-position: center; /* Centers the image */
+  
 }
 
 .support-container {
