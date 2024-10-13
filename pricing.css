@@ -4,10 +4,6 @@ body, html {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
     color: #333;
-    background-image: url('A-front-side-looking-at-Matterhorn.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
   }
   
   nav {
@@ -109,7 +105,7 @@ body, html {
   
   .pricing-section {
     padding: 60px 20px;
-    background-color: #e0f7fa;
+    background-color: #3e5365;
   }
   
 
@@ -123,7 +119,7 @@ body, html {
 .section-description {
     text-align: center;
     font-size: 1.2rem;
-    color: #333;
+    color: white;
     margin-bottom: 50px;
 }
 
