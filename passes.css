@@ -3,10 +3,11 @@ body, html {
     padding: 0;
     font-family: Arial, sans-serif;
     /*background-color: #f0f8ff;*/
-    background-image: url('https://images.pexels.com/photos/209955/pexels-photo-209955.jpeg?cs=srgb&dl=pexels-pixabay-209955.jpg&fm=jpg');
     background-size: cover;
     background-position: center;
     color: #333;
+    height: 100%;
+   
   }
 
   nav {
@@ -15,6 +16,9 @@ body, html {
     padding-right: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
+    justify-content: space-between;
+    align-items: center;
+    
   }
   
   nav ul {
@@ -24,6 +28,7 @@ body, html {
     justify-content: flex-end;
     align-items: center;
     color: black;
+    
   }
   
   nav li {
@@ -90,7 +95,7 @@ nav a.logo img {
     display: none;
   }
   
-  @media(max-width: 800px) {
+  @media(max-width: 768px) {
     .hideOnMobile {
       display: none;
     }
@@ -106,7 +111,7 @@ nav a.logo img {
   }
   
     header.hero {
-    background-image: url('images/ski-mountains.jpg');
+    background-image: url('https://assets.vogue.com/photos/63b883bdf8989f4ae6ba680e/master/w_2560%2Cc_limit/GettyImages-502757710.jpg');
     background-size: cover;
     background-position: center;
     color: white;
@@ -123,12 +128,13 @@ nav a.logo img {
     font-size: 2.5rem;
     margin-bottom: 20px;
     text-align-last: center;
+    color: whitesmoke ;
   }
   
   .hero p {
     font-size: 1.2rem;
     margin-bottom: 40px;
-    color: #666;
+    color: white;
   }
   
   
@@ -137,95 +143,46 @@ nav a.logo img {
     align-items: center;
   }
 
-.card-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
-  grid-gap: 20px; /* Space between cards */
-  width: 80%;
-  margin: 20px auto;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
-.card {
-  perspective: 1000px;
-  width: 300px;
-  height: 300px;
+.pass {
+    width: 50%; /* Adjust the width as necessary */
+    margin-bottom: 20px; /* Space between rows */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 8px; /* Round the corners */
+    overflow: hidden; /* Prevent overflow of content */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+    align-content: center;
 }
 
-.card-inner {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.pass:hover {
+    transform: scale(1.05); /* Scale effect on hover */
 }
 
-.card:hover .card-inner {
-  transform: rotateY(180deg);
+.front, .back {
+    padding: 15px;
 }
 
-.card-front, .card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
-  border-radius: 10px;
-  text-align: center;
+.front {
+    background-color: #f4f4f4; /* Light background for the front */
 }
 
-.card-front {
-  background-color: #ffffff;
-  border: 2px solid #ccc;
+.back {
+    background-color: #eaeaea; /* Slightly darker background for the back */
+    display: none; /* Initially hide the back */
 }
 
-.card-back {
-  background-color: #009688;
-  color: white;
-  transform: rotateY(180deg);
-  border: 2px solid #009688;
+/* Toggle the visibility of back and front */
+.pass:hover .front {
+    display: none; /* Hide front on hover */
 }
 
-h3 {
-  margin-top: 0;
-  font-size: 1.4em;
-  color: #4a4a4a;
-}
-
-p {
-  color: #666;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  text-align: center;
-  margin: 10px 0;
-}
-
-.price {
-  font-weight: bold;
-  color: yellow;
-}
-
-/* Media query for smaller screens (1-column layout) */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-
-    .column {
-        flex: 100%;
-        margin: 10px 0;
-    }
+.pass:hover .back {
+    display: block; /* Show back on hover */
 }
   
 footer {
@@ -257,5 +214,15 @@ footer p {
   left: 20px;
   margin: 0;
   padding-left: 550px;
+}
+
+@media(max-width: 768px) {
+  footer {
+      flex-direction: column;
+      text-align: center;
+  }
+  footer p {
+      padding-left: 0;
+  }
 }
   

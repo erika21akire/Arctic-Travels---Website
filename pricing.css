@@ -123,7 +123,7 @@ body, html {
 .section-description {
     text-align: center;
     font-size: 1.2rem;
-    color: #ccc;
+    color: #333;
     margin-bottom: 50px;
 }
 
@@ -246,7 +246,7 @@ body, html {
     margin-bottom: 10px;
 }
   
-footer {
+  footer {
   background-color: #333;
   color: white;
   padding: 20px 0;

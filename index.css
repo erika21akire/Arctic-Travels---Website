@@ -156,7 +156,7 @@ main {
 
 .category {
   background-color: #e0f7fa;
-  padding: 20px;
+  padding: 40px;
   border-radius: 10px;
   flex: 1 1 250px;
   margin: 10px;
@@ -185,10 +185,9 @@ main {
 
 .amenities-section {
   padding: 40px 20px;
-  background-image: url('https://cdn.wallpapersafari.com/55/5/JX3RTq.jpg');
-  background-size: cover;
-  background-position: center;
-  
+  background-image: url('https://www.powder.com/.image/t_share/MTk2MzczODE0MjI2NTI3ODkw/alta-base-2-300dpi-copy.jpg');
+ background-repeat: repeat;
+ background-size: contain;
 }
 
 .container {
@@ -224,7 +223,7 @@ h2 {
 }
 
 .amenity-item img {
-  width: 100%;
+  width: 90%;
   height: auto;
   border-radius: 8px;
   margin-bottom: 20px;
@@ -251,7 +250,6 @@ h2 {
 
 .newsletter {
   padding: 50px 10px;
- 
 }
 
 .newsletter-section {
