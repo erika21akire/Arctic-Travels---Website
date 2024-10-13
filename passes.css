@@ -2,7 +2,7 @@ body, html {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    /*background-color: #f0f8ff;*/
+    background-color: #f0f8ff;
     background-size: cover;
     background-position: center;
     color: #333;
@@ -139,50 +139,104 @@ nav a.logo img {
   
   
   main {
-    padding: 40px 20px;
+    padding: 100px;
     align-items: center;
+    
   }
 
   .container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    width: 80%;
+    margin: -70px auto;
+    padding: -90px;
+  }
+
+/* Passes Section */
+.passes {
+  background: url('ski-resort-background.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: -100px;
 }
 
-.pass {
-    width: 50%; /* Adjust the width as necessary */
-    margin-bottom: 20px; /* Space between rows */
-    border: 1px solid #ccc; /* Add a border */
-    border-radius: 8px; /* Round the corners */
-    overflow: hidden; /* Prevent overflow of content */
-    transition: transform 0.3s; /* Smooth transition for hover effect */
-    align-content: center;
+.passes h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
 }
 
-.pass:hover {
-    transform: scale(1.05); /* Scale effect on hover */
+.passes p {
+  font-size: 18px;
+  margin-bottom: 40px;
 }
 
-.front, .back {
-    padding: 15px;
+.pass-options {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.front {
-    background-color: #f4f4f4; /* Light background for the front */
+.pass-card {
+  padding: 30px;
+  border-radius: 10px;
+  width: 250px;
+  margin: 20px;
+  text-align: center;
+  color: #fff;
 }
 
-.back {
-    background-color: #eaeaea; /* Slightly darker background for the back */
-    display: none; /* Initially hide the back */
+.pass-card h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-/* Toggle the visibility of back and front */
-.pass:hover .front {
-    display: none; /* Hide front on hover */
+.pass-card .price {
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
-.pass:hover .back {
-    display: block; /* Show back on hover */
+.pass-card ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.pass-card ul li {
+  margin-bottom: 10px;
+}
+
+.pass-card .btn {
+  background-color: #f5a623;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.pass-card .btn:hover {
+  background-color: #e5941f;
+}
+
+/* Individual Pass Colors */
+.pass-day {
+  background-color: #1c75bc;  /* Cool Blue */
+}
+
+.pass-week {
+  background-color: #30a5a1;  /* Teal */
+}
+
+.pass-season {
+  background-color: #445b8d;  /* Slate Blue */
+}
+
+.pass-family {
+  background-color: #4a91d3;  /* Sky Blue */
+}
+
+.pass-student {
+  background-color: #298b89;  /* Sea Green */
+}
+
+.pass-night {
+  background-color: #4b546a;  /* Cool Gray */
 }
   
 footer {
