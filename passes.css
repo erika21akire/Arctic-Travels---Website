@@ -181,12 +181,14 @@ nav a.logo img {
   margin: 20px;
   text-align: center;
   color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.4); /* Frame (border) around each card */
+ 
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition for hover effect */
 }
 
 .pass-card:hover {
   transform: translateY(-10px); /* Lifts the card upward */
-  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2), inset 0px 0px 15px rgba(0, 0, 0, 0.4); /* Adds shadow for depth */
 }
 
 .pass-card h2 {
@@ -224,26 +226,38 @@ nav a.logo img {
 /* Individual Pass Colors */
 .pass-day {
   background-color: #1c75bc;  /* Cool Blue */
+  background: linear-gradient(145deg, #246faa, #1c75bc); /* Lighter gradient */
+  box-shadow: inset 0px 0px 10px rgba(28, 117, 188, 0.6); /* Lighter inner shadow */
 }
 
 .pass-week {
   background-color: #30a5a1;  /* Teal */
+  background: linear-gradient(145deg, #4cb7b4, #30a5a1); /* Lighter gradient */
+  box-shadow: inset 0px 0px 10px rgba(48, 165, 161, 0.6); /* Lighter inner shadow */
 }
 
 .pass-season {
   background-color: #445b8d;  /* Slate Blue */
+  background: linear-gradient(145deg, #566d9c, #445b8d); /* Lighter gradient */
+  box-shadow: inset 0px 0px 10px rgba(68, 91, 141, 0.6); /* Lighter inner shadow */
 }
 
 .pass-family {
   background-color: #4a91d3;  /* Sky Blue */
+  background: linear-gradient(145deg, #5ca3e1, #4a91d3); /* Lighter gradient */
+  box-shadow: inset 0px 0px 10px rgba(74, 145, 211, 0.6); /* Lighter inner shadow */
 }
 
 .pass-student {
   background-color: #298b89;  /* Sea Green */
+  background: linear-gradient(145deg, #3a9d9b, #298b89); /* Lighter gradient */
+  box-shadow: inset 0px 0px 10px rgba(41, 139, 137, 0.6); /* Lighter inner shadow */
 }
 
 .pass-night {
   background-color: #4b546a;  /* Cool Gray */
+  background: linear-gradient(145deg, #5d6679, #4b546a); /* Lighter gradient */
+  box-shadow: inset 0px 0px 10px rgba(75, 84, 106, 0.6); /* Lighter inner shadow */
 }
   
 footer {
