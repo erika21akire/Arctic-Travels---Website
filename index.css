@@ -185,13 +185,16 @@ main {
 
 .amenities-section {
   padding: 40px 20px;
-  background-image: url('https://www.powder.com/.image/t_share/MTk2MzczODE0MjI2NTI3ODkw/alta-base-2-300dpi-copy.jpg');
- background-repeat: repeat;
- background-size: contain;
+  /*background-image: url('https://www.powder.com/.image/t_share/MTk2MzczODE0MjI2NTI3ODkw/alta-base-2-300dpi-copy.jpg');
+  background-repeat: repeat;
+  background-size: contain;*/
+  background-image: url('https://watermark.lovepik.com/photo/20211208/large/lovepik-plateau-snow-mountain-picture_501614517.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .container {
-  max-width: 1200px;
+  width: 80%;
   margin: 0 auto;
   text-align: center;
 }

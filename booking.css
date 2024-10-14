@@ -4,6 +4,9 @@ body, html {
     font-family: Arial, sans-serif;
     background-color: #f0f8ff;
     color: #333;
+    background-image: url('https://assets.vogue.com/photos/63b883bdf8989f4ae6ba680e/master/w_2560%2Cc_limit/GettyImages-502757710.jpg');
+  background-size: cover;
+  background-position: center;
     
   }
   
